@@ -1,0 +1,68 @@
+/*don't ask how many members in a group unless it is a group project*/
+.groepsprojtext {
+    display: none;
+}
+
+#groepsproj:checked ~ .groepsprojtext {
+    display: block;
+}
+
+/*don't ask about scrum unless they use scrum*/
+.scrumtext {
+    display: none;
+}
+
+#scrum:checked ~ .scrumtext {
+    display: block;
+}
+
+/*don't ask about playtests unless the student organises playtests*/
+.playtesttext {
+    display: none;
+}
+
+#playtest:checked ~ .playtesttext {
+    display: block;
+}
+
+/*don't ask about deadlines unless they repeat themselves ^= */
+#deadlineText1 {
+    display: none;
+}
+
+#deadlineCheck1:checked ~ #deadlineText1 {
+    display: block;
+}
+
+/* Makes \n be newline*/
+#doelen {
+    white-space: pre-line;
+}
+
+#magWel {
+    white-space: pre-line;
+}
+
+#magNiet {
+    white-space: pre-line;
+}
+
+#lesonderdelen {
+    white-space: pre-line;
+}
+
+#scrum {
+    white-space: pre-line;
+}
+
+#playtest {
+    white-space: pre-line;
+}
+
+#deadlines {
+    white-space: pre-line;
+}
+
+#opleveren {
+    white-space: pre-line;
+}

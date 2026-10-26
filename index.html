@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>8FE form</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <h1>Hulpmiddel opstellen studenthandleiding conform 8FE design</h1>
+
+<br>
+    <input type="checkbox" id="groepsproj"> Dit is een groepsproject
+
+<div class="groepsprojtext">
+    Hoeveel studenten per groep?
+    <input type="number" id="groepsgrootte" min = "0" max = "30">
+</div>
+<br>
+<br>
+
+In het kort: Wat is de opdracht?<br>
+<textarea style="height: 100px; width: 700px;" id="opdrachtbeschrijving"></textarea>
+<br>
+<br>
+
+Welke rollen neemt de student aan in deze opdracht?<br>
+<div id="rollen">
+ <input type="checkbox" id="rol1"> Developer <br>
+ <input type="checkbox" id="rol2"> Designer <br>
+ <input type="checkbox" id="rol3"> Scrum Master <br>
+ <input type="checkbox" id="rol4"> Product Owner<br>
+ <input type="checkbox" id="rol5"> <input type="text" id="roltext5" placeholder="Anders, namelijk"><br>
+ </div>
+<button onclick="addRol()">Voeg rol toe</button>
+ <br>
+ <br>
+
+ Welke mijlpalen moet de student behalen?
+<div id="mijlpalen">
+    <input type="text" id="mijlpaal1" placeholder="Mijlpaal 1">
+    <br>
+</div>
+<button onclick="addMijlpaal()">Voeg mijlpaal toe</button>
+<br><br>
+
+Welk van de volgende onderdelen mogen (mits duidelijk vermeld) door derden zijn gemaakt?
+<div id="derden">
+    <input type="checkbox" id="der1" checked> code-snippets/code uit tutorials (niet voor main mechanic) <br>
+    <input type="checkbox" id="der2" checked> code (deels) gemaakt door AI <br>
+    <input type="checkbox" id="der3" checked> audio/art assets <br>
+</div>
+<br>
+
+Wat komt aan bod tijdens de lessen?
+<br>
+<textarea style="height: 100px; width: 700px;" id="lesonderdelen"></textarea>
+
+<br>
+<br>
+
+<input type="checkbox" id="scrum"> De student gebruikt Scrum
+<div class="scrumtext">
+    Hoe lang (in weken) duren sprints?<br>
+    <input type="number" id="sprintLength"><br>
+    <br>
+    <input type="checkbox" id="burndown"> De student gebruikt een burn-down chart<br>
+</div>
+<br>
+<br>
+<input type="checkbox" id="playtest"> De student organiseert playtests<br>
+<div class="playtesttext">
+    Wanneer zijn de playtest?<br>
+    <div id="playtestData">
+        <input type="text" id="playtest1" placeholder="1 jan 1900, 1-1-1900 of week 1" style="width: 200px"><br>
+    </div>
+    
+    <button onclick="addPlaytest()">Voeg playtest toe</button>
+</div>
+<br>
+Wanneer begint deze module?<br>
+<input type="text" id="begindatum" placeholder="1 jan 1900, 1-1-1900 of week 1" style="width: 200px"><br>
+<br>
+Wanneer eindigd deze module?<br>
+<input type="text" id="einddatum" placeholder="1 jan 1900, 1-1-1900 of week 1" style="width: 200px"><br>
+<br>
+Welke tussentijdse deadlines zijn er?<br>
+<div id="deadlines">
+    <input type="text" id="deadline1" placeholder="Naam deadline" style="width: 200px"><input type="text" id="deadline1tijd" placeholder="1 jan 1900, 1-1-1900 of week 1" style="width: 200px"><br>
+    <input type="checkbox" id="deadlineCheck1" class="deadlineText"> Deze deadline herhaalt zich<br>
+    <div id="deadlineText1" >
+        Deze deadline herhaalt zich elke <input type="number" id="deadline1herhaling" style="width:50px">weken<br>
+    </div>
+</div>
+<button onclick="addDeadline()">Voeg deadline toe</button><br>
+<br>
+Officiële communicatie (inleveren en/of presentaties) vanuit de student gebeurt in het:<br>
+<input type="radio" name="language" value="Nederlands" checked> <label>Nederlands</label> <br>
+<input type="radio" name="language" value="Engels"> <label>Engels</label> <br>
+<br>
+Is het spel in 2D of 3D?<br>
+<input type="radio" name="2D" value="2D" checked> <label>2D</label> <br>
+<input type="radio" name="2D" value="3D"> <label>3D</label> <br>
+<input type="radio" name="2D" value="Vrij"> <label>Eigen keuze</label> <br>
+<input type="radio" name="2D" value="nvt"> <label>Niet van toepassing</label> <br>
+<br>
+Wat moet de student opleveren?<br>
+<div id="opleverText">
+    <input type="text" id="oplever1" placeholder="GDD" style="width: 200px"><br>
+</div>
+<button onclick="addOplever()">Voeg op te leveren document toe</button><br>
+<br>
+<button onclick="create8FE()">Studentenhandleiding</button><br>
+
+<script src="index.js"></script>
+</body>
+
+
+</html>

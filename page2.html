@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome!</h1>
+
+<p id="result"></p>
+
+<script>
+const name = localStorage.getItem("userName");
+
+document.getElementById("result").textContent =
+    "Hello, " + name + "!";
+</script>
+
+</body>
+</html>
